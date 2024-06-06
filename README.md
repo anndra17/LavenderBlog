@@ -31,16 +31,16 @@ This project involves developing a blog platform using Express.js, EJS templates
 1. **Clone the repository**:
    `git clone https://github.com/yourusername/your-repo-name.git`
 
-2. **Navigate to the project directory:
+2. **Navigate to the project directory**:
     `cd your-repo-name`
 
-3. **Install the dependencies:
+3. **Install the dependencies**:
     `npm install`
 
-4. **Start the server:
+4. **Start the server**:
     `node index.js` 
 
-5. **Open your browser and navigate to:
+5. **Open your browser and navigate to**:
     [localhost](http://localhost:3000).
 
 ## How it should look like:
