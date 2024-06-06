@@ -45,14 +45,14 @@ This project involves developing a blog platform using Express.js, EJS templates
 
 ## How it should look like:
 ### Home page - where the posts can be seen
- ![HomePage](HomePage.png)
+ ![HomePage](imagesForReadme/HomePage.png)
 
 ### Write page - where the posts can be written
- ![WritePage](WritePage.png)
+ ![WritePage](imagesForReadme/WritePage.png)
 
 ### About page 
- ![AboutPage](AboutPage.png)
+ ![AboutPage](imagesForReadme/AboutPage.png)
  
 ### Contact page
- ![ContactPage](ContactPage.png)
+ ![ContactPage](imagesForReadme/ContactPage.png)
 
