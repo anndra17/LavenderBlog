@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .post-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+    <h1>🪻Posts</h1>
+    <div class="post-box" id="posts"></div>
+    <a href="/write"><i class="fas fa-plus"></i></a>
+    <script src="script.js"></script>
+    <%- include("partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new post</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+
+    <h1>Write a post 😊</h1>
+    <form id="postForm">
+        <input name="username" type="text" class="post-input" placeholder="Username" />
+        <input name="title" type="text" class="post-input" placeholder="Title" />
+        <textarea name="text" class="post-input" placeholder="Write here :)"></textarea>
+        <input name="photo" type="file" class="imagePost-button" id="photoInput" placeholder="Choose a photo">
+        <img id="imagePreview" class="imagePost" />
+        <input type="submit" value="SUBMIT" />
+    </form>
+
+    <%- include("partials/footer.ejs") %>
+    <script>
+        document.getElementById('photoInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgElement = document.getElementById('imagePreview');
+                    imgElement.src = e.target.result;
+                    imgElement.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = event.target.username.value;
+            const title = event.target.title.value;
+            const text = event.target.text.value;
+            const photoInput = event.target.photo.files[0];
+            const reader = new FileReader();
+
+            if (username && title && text && photoInput) {
+                reader.onload = function(e) {
+                let posts = JSON.parse(localStorage.getItem('posts')) || [];
+                posts.push({ username, title, text, photo: e.target.result });
+                localStorage.setItem('posts', JSON.stringify(posts));
+                window.location.href = '/';
+                }
+                reader.readAsDataURL(photoInput);
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
