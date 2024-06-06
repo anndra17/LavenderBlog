@@ -43,3 +43,16 @@ This project involves developing a blog platform using Express.js, EJS templates
 5. **Open your browser and navigate to:
     [localhost](http://localhost:3000).
 
+## How it should look like:
+### Home page - where the posts can be seen
+ ![HomePage](HomePage.png)
+
+### Write page - where the posts can be written
+ ![WritePage](WritePage.png)
+
+### About page 
+ ![AboutPage](AboutPage.png)
+ 
+### Contact page
+ ![ContactPage](ContactPage.png)
+
